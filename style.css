@@ -1,0 +1,302 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;  /*padding establece el espacio de relleno requerido por todos los lados de un elemento*/
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top:110px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+/*Propiedad hover captura el movimiento del mouse*/
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+
+}
+
+.productos{
+    width: 940px;
+    margin:0 auto;
+    padding: 50px;
+}
+.productos li {
+    display:inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    /*background: #CCCCCC;*/
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    /*border-box - el limite de los objetos son los de la caja*/
+    box-sizing: border-box;
+    /*border-color: #000000;
+    border-width: 2px;
+    border-style: solid;*/
+    /*Border simplificado - tamaño tipo y color*/
+    border: 3px solid #000000;
+    border-radius: 10px;
+}
+.productos li:hover{
+    border-color: #c78c19;
+}
+/*:active nos da funciones para cuando el objeto esta activo*/
+.productos li:active{
+    border-color: #2f6e04;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+.Copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px;
+}
+/*main{
+    
+}*/
+
+form{
+    margin: 40px 0;
+}
+form label, form p{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+/* utilizando la , podemos aplicar varias configuraciones a varios inputs*/
+/*form input, form textarea{*/
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+
+}
+/*Jerarquia de marcadores. entre identificador (id), etiqueta (<>) y clase (class)
+
+1ro ID 2do CLASS 3ro Etiqueta */
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-style: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px; /*Borde redondeado - radio de curva de la esquina*/
+    transition: 2s all; /*Le da un tiempo para el cambio de color generado por el hover - el all nos altera a todas las propiedades*/
+    cursor: pointer; /* Cambiamos el cursor por la manito*/
+}
+.enviar:hover{  /*para darle un resalte cuando pasamos el mouser*/
+    background: darkorange;
+    /*transform: scale(1.2) rotate(70deg); transform nos da diferentes transf. a las propiedades del elemento*/
+    transform: scale(1.2);
+}
+
+table{
+    margin: 40px 40px;
+}
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/*CSS para INDEX - pagina inicial*/
+
+.banner{
+    width: 100%;
+}
+/*Selectores avanzados*/
+/*
+main > p {} aplica a hijos solamente, p hijos directos de main no jerarquia subsecuente
+img  + p{} aplica a primer parrafo que viene despues de una imagen
+img ~ p   {} aplica a todos los parrafos que vienen despues de la imagen
+.principal p: not(#mision) aplica a todos menos al 2do parrafo - mision
+*/
+/*Calculo se realiza con calc
+width: calc ((100/3) - 10px) calcula un tercio del elelemnto y le restamos el 10px del elemento para dejarlo 100% de ancho con el equivalente a un tercio del padre
+*/
+.principal{
+    width: 940px;
+    margin: 0 auto;
+    background: #fefefe;
+    padding: 3em 0;
+}
+.titulo-principal{
+    text-align: center;
+    font-size: 2em; /*2 veces tamaño padron de fuente del navegador*/
+    margin: 0 0 1em;
+    clear:left; /*Cualquier configuracion que venga despues del titulo - que la limpie*/
+    /*Opacidad en textos con RGBA*/
+    /*color: rgba(red, green, blue, alpha) alpha es para la opacidad del texto*/
+    /*sombra en texto
+    text-shadow: 2px 2px 10px red ;*/
+}
+
+
+
+/*Pseudo elemento permite dar estilos o personalizar elementos particulares */
+/*.titulo-principal:first-letter{
+    font-weight: bold;
+}
+p:first-line{
+    font-style: italic;
+}
+.titulo-principal:before{
+    content:"["
+}
+.titulo-principal:after{
+    content:"]"
+}*/
+
+
+.principal p {
+    margin: 0 0 1em;
+}
+.principal strong{
+    font-weight: bold;
+
+}
+.principal em{
+    font-style: italic;
+}
+.utensilios{
+    width: 120px;
+    float: left; /*Ponemos el elemento en parte izquierda o derecha*/
+    /*margen superior - derecha - inferior e izquierda*/
+      margin: 0 20px 20px 0;
+}
+
+.mapa {
+    padding: 3em 0;
+    /*background: linear-gradient(90deg,orange,blue); - le damos un angulo para que no sea horizontal*/
+    background: linear-gradient(#fefefe,#888); /*linear-gradient() nos hace un degrade de colores*/
+}
+.mapa  p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+.diferenciales{
+    padding: 3em 0;
+    background: #888;
+    /*Sombras internas con inset
+    box-shadow: inset 0 0 30px red; */
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+.lista-diferenciales{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{
+    line-height: 1.5; /*Le damos el tamaño a la linea 50% mas*/
+}
+/*Pseudo elemento que agrega una estrellita antes de los items*/
+.items:before{
+    content:"★";
+
+}
+/*Pseudo clases - primer hijo o primer item de la clase */
+.items:first-child{
+    font-weight: bold;
+}
+
+/*Ultimo item se pinta de negrita
+.items:last-child{
+    font-weight: bold;
+}*/
+
+.imagen-diferenciales{
+    width: 60%;
+    transition: 400ms; /*Permite que los cambios se apliquen en el tiempo indicado*/
+    /*Sombra de los elementosv con box-shadow (derecha + / izquierda - ; arriba - /abajo + ; difumacion ; sprit -expansion- y el color) */
+    box-shadow: 10px 10px 20px 15px  #000000;
+
+}
+.imagen-diferenciales:hover{
+    opacity: 0.3; /*Opacidad del 30% - siendo el 0 que no pase luz y 100% normal*/
+
+}
+
+.video{
+    width: 560px;
+    margin: 2em auto;
+}
+
+/*Configuramos para que si lo usamos con celulares (menos 480px  de pantalla) haga acciones*/
+/*<media query> recurso para crear condiciones y aplicar formatos o estilos diferentes*/
+@media screen and (max-width:480px){
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video {
+        width: auto;
+    }
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto - Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--header es el encabezado de la pagina -->
+        <header>
+            <div class="caja">
+				<!--alt agrega un texto alternativo por si no carga la imagen -->
+                <h1><img src="imagenes/logo.png" alt="Logo de la barberia Alura"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+		<main>
+			<form>
+				<label for="nombreapellido">Nombre y Apellido</label>
+				<input type="text" id="nombreapellido" class="input-padron" required>
+				<!--el required es para volver el campo obligatorio -->
+				<label for="correoelectronico">Correo Electrónico</label>
+				<input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+				<!--http://mobileinputtypes.com/ para configurar type para el celular-->
+				<label for="telefono">Teléfono</label>
+				<input type="tel" id="telefono" class="input-padron" required placeholder="(xxx) xxxxxxx">
+				<!--placeholder ayuda al usuario mostrando el formato en el selector-->
+				<label for="mensaje">Mensaje</label>
+				<textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+
+				<fieldset>
+					<legend>¿Cómo le gustaria que lo contactemos?</legend>
+
+					<label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+
+					<label for="radio-telefono"><input type="radio" name="contacto" value="Telefono" id="radio-telefono">Telefono</label>
+
+					<!--type radio es por un redondel para seleccionar-->
+					<!--name contacto agrupa todos y permite seleccionar solo 1-->
+					<!--id nombre para utilizar con el label-->
+					<label for="radio-whatsapp"><input type="radio" name="contacto" value="Whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+				</fieldset>
+
+				<fieldset> <!-- fieldset referencian a un Tipo de conjunto de datos-->
+					<p>¿En cual horario prefiere ser atendido?</p>
+					<select>
+						<option value="">Mañana</option>
+						<option value="">Tarde</option>
+						<option value="">Noche</option>
+					</select>
+				</fieldset>
+				<label class="checkbox"><input type="checkbox" checked> <!--checked me deja tildada la opcion-->
+					¿Le gustaría recibir novedades de la Barberia Alura?
+				</label>
+
+				<input type="submit" value="Enviar formulario" class="enviar">
+
+			</form>
+			<table> <!--Permite realizar tablas - tag de HTML-->
+				<thead> <!--Head de la tabla-->
+					<tr> <!--Table Rows - lineas-->
+						<th>Día</th> <!--Table celdas - columnas del head-->
+						<th>Horario</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Lunes</td>
+						<td>8hs - 20hs</td>
+					</tr>
+						<td>Miércoles</td>
+						<td>8hs - 20hs</td>
+					<tr>
+						<td>Viernes</td>
+						<td>8hs - 20hs</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+ 		<footer>
+			<img src="imagenes/logo-blanco.png" alt="Imagen de pie de pagina">
+			<p class="Copyright">&copy Copyright Barberia Alura - 2022 - </p>
+		</footer>
+	</body>
+</html>
